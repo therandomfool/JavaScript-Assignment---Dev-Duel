@@ -1,0 +1,47 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form > * {
+    margin: 8px auto;
+}
+
+main hr {
+    margin: 0 24px;
+    border-color: #555555;
+    background-color: #555555;
+    color: #555555;
+}
+
+button {
+    width: 120px;
+}
+
+span.username {
+    font-weight: bold;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.stats .stat {
+    display: flex;
+    flex-direction: row;
+}
+
+.stats .stat > * {
+    display: flex;
+    width: 50%;
+}
+
+.stat .label {
+    justify-content: flex-end;
+}
+
+.stat .value {
+    justify-content: flex-start;
+}

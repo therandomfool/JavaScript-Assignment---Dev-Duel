@@ -1,0 +1,62 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form > * {
+    margin: 8px auto;
+}
+
+form .input-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+form input {
+    margin: 4px 4px;
+}
+
+button {
+    width: 120px;
+}
+
+button:hover {
+    background-color: red;
+}
+
+span.username {
+    font-weight: bold;
+}
+
+.duel-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.stats .stat {
+    display: flex;
+    flex-direction: row;
+}
+
+.stats .stat > * {
+    display: flex;
+    width: 50%;
+}
+
+.stat .label {
+    justify-content: flex-start;
+    white-space: nowrap;
+}
+
+.stat .value {
+    justify-content: flex-end;
+    white-space: nowrap;
+}

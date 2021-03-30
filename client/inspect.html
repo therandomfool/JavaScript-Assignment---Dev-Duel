@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>dev-duel</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/inspect.css">
+    <script src="env.js"></script>
+</head>
+<body>
+<div class="page-container">
+    <header>
+        <div class="section logo">
+            <a href="index.html">&lt;dev-duel&gt;</a>
+        </div>
+        <nav>
+            <a class="active" href="./inspect.html">inspect</a>
+            <a href="duel.html">duel</a>
+        </nav>
+    </header>
+    <main>
+        <span>inspect</span>
+        <hr>
+        <section class="form-container">
+            <form>
+                <input name="username" type="text" placeholder="username">
+                <button type="submit">inspect</button>
+            </form>
+        </section>
+        <section class="user-results hide">
+            <span class="username">qbolt</span>
+            <span class="full-name">Quinton Bolt</span>
+            <span class="location">Memphis, TN</span>
+            <span class="email">bolt.quinton@gmail.com</span>
+            <span class="bio">Designer/Developer</span>
+            <img class="avatar" src="https://avatars0.githubusercontent.com/u/17500092?v=4" alt="avatar picture">
+            <div class="stats">
+                <div class="stat">
+                    <span class="label">Titles:&nbsp;</span>
+                    <span class="titles value">Forker, Stalker</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Favorite language:&nbsp;</span>
+                    <span class="favorite-language value">JavaScript</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Total stars:&nbsp;</span>
+                    <span class="total-stars value">5</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Highest star count:&nbsp;</span>
+                    <span class="most-starred value">4</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Public repos:&nbsp;</span>
+                    <span class="public-repos value">16</span>
+                </div>
+                <div class="stat">
+                    <span class="label">'Perfect' Repos:&nbsp;</span>
+                    <span class="perfect-repos value">2</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Followers:&nbsp;</span>
+                    <span class="followers value">10</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Following:&nbsp;</span>
+                    <span class="following value">1</span>
+                </div>
+            </div>
+        </section>
+        <section class="user-error hide">
+            <span class="error">Error message here</span>
+        </section>
+    </main>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script src="./js/inspect.js"></script>
+</body>
+</html>

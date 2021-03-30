@@ -1,0 +1,43 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+main .link-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin: 12px 0;
+    width: 50%;
+}
+
+main .link-container button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-width: 50px;
+    text-align: center;
+    padding: 14px 28px;
+}
+
+main hr {
+    margin: 0 24px;
+    border-color: #555555;
+    background-color: #555555;
+    color: #555555;
+}
+
+button.duel:hover {
+    background-color: red;
+}
+
+@media screen and (min-width: 650px) {
+    main section {
+        flex-direction: row;
+    }
+
+    main .link-container {
+        width: 30%;
+    }
+}
