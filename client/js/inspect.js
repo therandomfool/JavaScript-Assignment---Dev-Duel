@@ -43,19 +43,23 @@ $('form').submit(() => {
       $('.bio').html(data.bio)
       $('.avatar').attr("src", data.avatar_url)
 
-      // $('.titles').html(JSON.stringify(data.titles))
+      $('.titles').html(JSON.stringify(data.titles))
       let titlesString = ''
       if (data.titles.length < 1) {
         $('.titles').html(`User has no titles`)
       } else {
         for (let x = 0; x < data.titles.length; x++) {
-          titlesString += `${data.titles[x]}`+ "<br>"
+          titlesString += `${data.titles[x]}` + "<br>"
         }
         $('.titles').html(titlesString)
         console.log(titlesString)
       }
 
-      $('.favorite-language').html(data.favorite_language)
+      if (data.favorite_language === null) {
+        $('.favorite-language').html("N U L L")
+      } else {
+        $('.favorite-language').html(data.favorite_language)
+      }
       // $('.total-stars').html(data.total_stars)
       $('.most-starred').html(data.highest_starred)
 
@@ -64,7 +68,7 @@ $('form').submit(() => {
       $('.followers').html(data.followers)
       $('.following').html(data.following)
 
-     
+
 
 
 
