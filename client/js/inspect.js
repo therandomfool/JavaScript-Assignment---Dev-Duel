@@ -16,13 +16,15 @@ $('form').submit(() => {
         'font-size': '30px',
         'color': 'red',
         'font-weight': '800',
+        'align-items': 'center',
         'justify-content': 'flex-start'
+
       })
       $('span.value').css({
         'font-size': '30px',
         'color': 'blue',
         'font-weight': '800',
-        'text-align': 'center'
+        'text-align': 'left'
       })
 
       $('div.stat').addClass('manipulation')
@@ -60,7 +62,7 @@ $('form').submit(() => {
       } else {
         $('.favorite-language').html(data.favorite_language)
       }
-      // $('.total-stars').html(data.total_stars)
+      $('.total-stars').html(data.total_stars)
       $('.most-starred').html(data.highest_starred)
 
       $('.public-repos').html(data.public_repos)
