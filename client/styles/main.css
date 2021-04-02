@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+
 body {
-    background-color: #efefef;
+    /* background-color: #efefef; */
     width: 100vw;
     height: 100vh;
 
     font-family: "Fira Code", serif;
+    /* font-family: 'Yatra One', cursive; */
 }
 
 .hide {

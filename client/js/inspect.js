@@ -10,11 +10,64 @@ $('form').submit(() => {
     .then(data => {
       console.log(`Got data for ${username}`)
       console.log(data)
-      /*
-        TODO
-        Attach the data returned to the DOM
-        The data currently hard-coded into the DOM is placeholder data
-       */
+
+      $('span.label').attr('id', 'forceMajeure')
+      $('#forceMajeure.label').css({
+        'font-size': '30px',
+        'color': 'red',
+        'font-weight': '800',
+        'justify-content': 'flex-start'
+      })
+      $('span.value').css({
+        'font-size': '30px',
+        'color': 'blue',
+        'font-weight': '800',
+        'text-align': 'center'
+      })
+
+      $('div.stat').addClass('manipulation')
+      $('.manipulation').css({
+        'margin': '20px 30px 0 30px',
+        'padding': '5px',
+        'border': '3px solid goldenrod',
+        'border-radius': '7px',
+        'background': '	#c6c6c6'
+      })
+
+
+
+      $('.username').html(data.username)
+      $('.full-name').html(data.name)
+      $('.location').html(data.location)
+      $('.email').html(data.email)
+      $('.bio').html(data.bio)
+      $('.avatar').attr("src", data.avatar_url)
+
+      // $('.titles').html(JSON.stringify(data.titles))
+      let titlesString = ''
+      if (data.titles.length < 1) {
+        $('.titles').html(`User has no titles`)
+      } else {
+        for (let x = 0; x < data.titles.length; x++) {
+          titlesString += `${data.titles[x]}`+ "<br>"
+        }
+        $('.titles').html(titlesString)
+        console.log(titlesString)
+      }
+
+      $('.favorite-language').html(data.favorite_language)
+      // $('.total-stars').html(data.total_stars)
+      $('.most-starred').html(data.highest_starred)
+
+      $('.public-repos').html(data.public_repos)
+      $('.perfect-repos').html(data.perfect_repos)
+      $('.followers').html(data.followers)
+      $('.following').html(data.following)
+
+     
+
+
+
 
       $('.user-results').removeClass('hide') // Display '.user-results' element
     })
