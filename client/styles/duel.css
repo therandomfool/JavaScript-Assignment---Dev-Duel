@@ -3,7 +3,7 @@ form {
     flex-direction: column;
 }
 
-form > * {
+form>* {
     margin: 8px auto;
 }
 
@@ -17,12 +17,40 @@ form input {
     margin: 4px 4px;
 }
 
+.duel-container{
+    background: ghostwhite;
+    color: rgb(72, 2, 2);
+    text-align: center;
+    font-size: 25px;
+}
+
+.duel-container span {
+    margin-top: 10px;
+}
+
+.duel-container img{
+    border: 4px inset gold;
+    border-radius: 13%;
+    width: 300px;
+    height: 300px;
+}
+
 button {
-    width: 120px;
+    width: 220px;
+    border: 3px inset rgb(16, 1, 1);
+    border-radius: 15px;
+    background: gold;
+    align-items: center;
+    justify-content: center;
+    padding: 38px 6.9px ;
+    outline: none;
 }
 
 button:hover {
-    background-color: red;
+    background-color: gold;
+    border-color: red;
+    color: ghostwhite;
+    transform: scale(1.1);
 }
 
 span.username {
@@ -46,13 +74,14 @@ span.username {
     flex-direction: row;
 }
 
-.stats .stat > * {
+.stats .stat>* {
     display: flex;
     width: 50%;
 }
 
 .stat .label {
     justify-content: flex-start;
+
     white-space: nowrap;
 }
 
@@ -60,3 +89,18 @@ span.username {
     justify-content: flex-end;
     white-space: nowrap;
 }
+
+input.userBtn {
+    height: 39px;
+    border: 6px inset rgba(255, 0, 0, 0.516);
+    border-radius: 15px;
+    background: ghostwhite;
+    outline: none;
+}
+
+#winner {
+    font-size: 40px;
+    border: 5px inset gold;
+}
+
+

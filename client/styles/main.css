@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
 
 body {
-    /* background-color: #efefef; */
     width: 100vw;
     height: 100vh;
-
-    font-family: "Fira Code", serif;
-    /* font-family: 'Yatra One', cursive; */
+    background-image: url(../assets/images.jpeg);
+    background-repeat: round;
+    opacity: .9;
+    font-family: 'Yatra One', cursive;
+    color: ghostwhite;
 }
 
 .hide {
@@ -33,10 +34,11 @@ main {
     display: flex;
     flex-direction: column;
     height: 90%;
-
+   
     border-radius: 4px;
-    background-color: #FFFFFF;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background-image: url(../assets/FzoNL.jpeg);
+    
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 main hr {
@@ -46,17 +48,17 @@ main hr {
     color: #555555;
 }
 
-main > span {
+main>span {
     display: flex;
     justify-content: center;
 
     margin: 24px 0;
     height: 60px;
 
-    font-size: 56px;
+    font-size: 76px;
 
-    color: #111;
-    font-family: 'Helvetica Neue', sans-serif;
+    color: ghostwhite;
+    
     letter-spacing: 2px;
     line-height: 1;
 }
@@ -70,24 +72,22 @@ main section {
 }
 
 a {
+    font-size: 25px;
     margin: 0 12px;
     text-decoration: none;
-    color: black;
+    color: red;
 }
 
 a:hover {
+    color: gold;
     text-decoration: underline;
 }
 
-a.active {
-    font-weight: bold;
-}
-
 button {
-    color: #111111;
-    background: transparent;
-    border: 2px solid #111111;
-    border-radius: 4px;
+    color: red;
+    background: gold;
+    border: 4px inset red;
+    border-radius: 6px;
     transition-duration: 0.2s;
     text-transform: uppercase;
 }
@@ -106,32 +106,17 @@ input::-webkit-input-placeholder {
     text-align: center;
 }
 
-input:-moz-placeholder { /* Firefox 18- */
+input:-moz-placeholder {
+    /* Firefox 18- */
     text-align: center;
 }
 
-input::-moz-placeholder {  /* Firefox 19+ */
+input::-moz-placeholder {
+    /* Firefox 19+ */
     text-align: center;
 }
 
 input:-ms-input-placeholder {
     text-align: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

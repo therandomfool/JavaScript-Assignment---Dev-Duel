@@ -15,12 +15,17 @@ $('form').submit(function() {
 
       $('.duel-container').removeClass('hide')
     })
-    // .catch(err => {
-    //   console.log(`Error getting data for ${request}`)
-    //   console.log(err)
-    // })
+    // .catch((err) => {
+    //   $(".duel-error").removeClass("hide");
+    //   $(".duel-error").html(
+       
+    //       "Error reteiving Username info. Username not Found please make sure your spelling is correct"
+    //   );
+    // });
   return false
 })
+
+
 
 const populatePage = async (left, right) => {
   $('.left .username').html(left.username)
@@ -101,19 +106,27 @@ const checkNull = data => {
   return data
 }
 
-const fixTitles = async (titles) => {
-  let titlesString = ''
-  if (titles.length < 1) {
-    $('.titles').html(`User has no titles`)
-  } else {
-    for (let x = 0; x < titles.length; x++) {
-      titlesString += `${titles[x]}` + "<br>"
-    }
-    $('.titles').html(titlesString)
-  }
-}
+// const fixTitles = async (titles) => {
+//   let titlesString = ''
+//   if (titles.length < 1) {
+//     $('.titles').html(`User has no titles`)
+//   } else {
+//     for (let x = 0; x < titles.length; x++) {
+//       titlesString += `${titles[x]}` + "<br>"
+//     }
+//     $('.titles').html(titlesString)
+//   }
+// }
 
 const chooseWinner = (left, right ) => {
-   $('#winner-name').html(`Congratulations <strong>${right.username}</strong>, you are the winner`)
+  let randomWinner = Math.floor((Math.random()*100));
+    console.log(randomWinner)
+    if(randomWinner%2){
+      $('#winner').html(`Congratulations <strong>${right.username}</strong>, you are the winner`)  
+    } else {
+      $('#winner').html(`Congratulations <strong>${left.username}</strong>, you are the winner`)
+    }
+    
+
    $('.winner-container').removeClass('hide')
 }

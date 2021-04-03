@@ -80,11 +80,8 @@ $('form').submit(() => {
     .catch(err => {
       console.log(`Error getting data for ${username}`)
       console.log(err)
-      /*
-        TODO
-        If there is an error finding the user, instead toggle the display of the '.user-error' element
-        and populate it's inner span '.error' element with an appropriate error message
-      */
+      $(".user-error").removeClass("hide");
+      $(".error").html('username: <b>'+ username + '</b> Not Found');
     })
 
   return false // return false to prevent default form submission

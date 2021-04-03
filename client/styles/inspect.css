@@ -14,9 +14,32 @@ main hr {
     color: #555555;
 }
 
-button {
-    width: 120px;
+ 
+input{
+    height: 39px;
+    border: 6px inset rgba(255, 0, 0, 0.516);
+    border-radius: 15px;
+    background: ghostwhite;
+    outline: none;
+    padding: 8px 6.9px ;
 }
+
+button {
+    width: 220px;
+    background: gold;
+    padding: 3px;
+    padding: 38px 6.9px ;
+    border-radius: 7px;
+}
+
+button:hover {
+    background-color: gold;
+    border-color: red;
+    color: ghostwhite;
+    transform: scale(1.1);
+}
+
+
 
 span.username {
     font-weight: bold;
