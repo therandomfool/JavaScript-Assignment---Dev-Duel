@@ -22,7 +22,7 @@ $('form').submit(function() {
   return false
 })
 
-const populatePage = (left, right) => {
+const populatePage = async (left, right) => {
   $('.left .username').html(left.username)
   $('.right .username').html(right.username)
 
@@ -41,14 +41,40 @@ const populatePage = (left, right) => {
   $('.left .avatar').attr('src',left.avatar_url)
   $('.right .avatar').attr('src',right.avatar_url)
 
-  $('.left .titles').html(fixTitles(left.titles))
-  $('.right .titles').html(fixTitles(right.titles))
+  // $('.left .titles').html(fixTitles(left.titleString))
+  // console.log(left.titles)
+  // $('.right .titles').html(fixTitles(right.titleString))
+  // console.log(right.titles)
 
+  
+    let leftTitlesString = ''
+    if (left.titles.length < 1) {
+      $('.left .titles').html(`User has no titles`)
+    } else {
+      for (let x = 0; x < left.titles.length; x++) {
+        leftTitlesString += `${left.titles[x]}` + "<br>"
+      }
+      $('.left .titles').html(leftTitlesString)
+    }
+    console.log(leftTitlesString)
+    
+    let rightTitlesString = ''
+    if (right.titles.length < 1) {
+      $('.right .titles').html(`User has no titles`)
+    } else {
+      for (let x = 0; x < right.titles.length; x++) {
+        rightTitlesString += `${right.titles[x]}` + "<br>"
+      }
+      $('.right .titles').html(rightTitlesString)
+    }
+    console.log(rightTitlesString)
+
+    
   $('.left .favorite-language').html(checkNull(left.favorite_language))
   $('.right .favorite-language').html(checkNull(right.favorite_language))
 
-  $('.left .most-starred').html(left.highest_starred)
-  $('.right .most-starred').html(right.highest_starred)
+  $('.left .highest-starred').html(left.highest_starred)
+  $('.right .highest-starred').html(right.highest_starred)
 
   $('.left .total-stars').html(left.total_stars)
   $('.right .total-stars').html(right.total_stars)
@@ -75,7 +101,7 @@ const checkNull = data => {
   return data
 }
 
-const fixTitles = titles => {
+const fixTitles = async (titles) => {
   let titlesString = ''
   if (titles.length < 1) {
     $('.titles').html(`User has no titles`)

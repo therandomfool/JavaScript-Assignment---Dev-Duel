@@ -45,7 +45,7 @@ $('form').submit(() => {
       $('.bio').html(data.bio)
       $('.avatar').attr("src", data.avatar_url)
 
-      $('.titles').html(JSON.stringify(data.titles))
+      // $('.titles').html(JSON.stringify(data.titles))
       let titlesString = ''
       if (data.titles.length < 1) {
         $('.titles').html(`User has no titles`)
